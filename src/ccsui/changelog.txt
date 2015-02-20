@@ -1,0 +1,13 @@
+2-19-15
+Since we decided to move with javagaming as the base for graphics and GUI, I decided to rebuild
+the current system. 
+
+http://athena.ecs.csus.edu/~gordonvs/165/165homework.html
+
+install the SAGE zip file and go from there. it's the basis for graphics. 
+
+for now i'm going to create two cichlids and a plant structure and then look into building buttons
+and see how they react.
+
+going to wait on thomas to see how rules can apply to this. might as well email gordon too. 
+
