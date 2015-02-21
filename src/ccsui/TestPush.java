@@ -1,5 +1,8 @@
 package ccsui;
+import java.awt.Color;
 import java.util.Random;
+
+import javax.swing.JButton;
 
 import sage.app.BaseGame;
 import sage.display.IDisplaySystem;
@@ -16,8 +19,9 @@ public class TestPush extends BaseGame {
 	HUDString tempDisplay;
 	Rectangle cichlidOne;
 	Rectangle cichlidTwo;
-	Cylinder plantStructure;
-
+	Rectangle button; 
+	Rectangle plantStructure;
+	
 	public void initGame()
 	{
 		initSimulationObjects();
@@ -31,13 +35,18 @@ public class TestPush extends BaseGame {
 		
 		// rectangles are ... fish
 		cichlidOne = new Rectangle(0.02f, 0.01f);
+		cichlidOne.translate(.3f, .3f, .3f);
 		addGameWorldObject(cichlidOne);
 		
 		cichlidTwo = new Rectangle(0.02f, 0.01f);
+		cichlidTwo.translate(-.3f, -.3f, -.3f);
 		addGameWorldObject(cichlidTwo);
 		
+		
 		// going to make a cylinder the "plant structure"
-		plantStructure = new Cylinder();
+		plantStructure = new Rectangle(.1f, .1f);
+		plantStructure.setColor(Color.green);
+		plantStructure.translate(.1f, .1f, .1f);
 		addGameWorldObject(plantStructure);
 		
 		// HUD
@@ -47,10 +56,13 @@ public class TestPush extends BaseGame {
 		tempDisplay = new HUDString("Temperature (C) : " + temperature);
 		tempDisplay.setLocation(0, 0.05f);
 		addGameWorldObject(tempDisplay);
+		
+		// i can create text data for the fish, such as aggression level etc.
 	}
 	
 	public void update(float timeElapsed)
 	{
+		/* 
 		for (SceneNode s : getGameWorld())
 		{
 			Random rng = new Random();
@@ -67,6 +79,7 @@ public class TestPush extends BaseGame {
 			}
 			
 		}
+		*/
 		time += timeElapsed;
 		
 		timeDisplay.setText("Time Elapsed : " + time/1000);

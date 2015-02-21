@@ -8,5 +8,6 @@ public class MainTest {
 	public static void main(String args[])
 	{
 		new TestPush().start();
+	//	GUIBuild testRun = new GUIBuild();
 	}
 }
